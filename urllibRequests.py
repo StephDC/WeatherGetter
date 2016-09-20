@@ -1,6 +1,6 @@
 import urllib.request
 import urllib.parse
-
+import version
 class Response:
     def __init__(self,data,charset='UTF-8'):
         self.text = data.decode(charset)
@@ -25,7 +25,7 @@ def get(urlStr,params={}):
     else:
         reqdata = urllib.request.Request(urlStr,method="GET")
     reqdata.add_header('User-Agent',
-                       'WeatherGetter/0.1 (https://github.com/StephDC/WeatherGetter)')
+                       'WeatherGetter/'+version.strVersion()+' (https://github.com/StephDC/WeatherGetter)')
     reqdata.add_header('Accept-Encoding','gzip, deflate')
     req = urllib.request.urlopen(reqdata)
     if req.headers.get('Content-Encoding') is not None:

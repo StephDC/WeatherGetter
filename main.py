@@ -4,10 +4,14 @@ import urllibRequests as ur
 import datetime
 import time
 import xml.etree.ElementTree as ET
+import parseConf
+import version
+
 def main():
+    conf = parseConf.parse('weather.conf')
     data = {
 'whichClient':'NDFDgenMultiZipCode',
-'zipCodeList':'16803',
+'zipCodeList':conf['zipCode'],
 'product':'glance',
 'begin':datetime.datetime.fromtimestamp(int(time.time())).isoformat(),
 'end':(datetime.datetime.fromtimestamp(int(time.time()))+datetime.timedelta(0.5)).isoformat(),
@@ -20,4 +24,7 @@ def main():
     print(info.text[39:])
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] in ['-v','--version']:
+        version.printVersion()
+    else:
+        main()
