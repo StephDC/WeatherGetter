@@ -40,6 +40,7 @@ Add n prefix: use night version.
 Add wind_ to skc to ovc: Use windy version.
 
 The following weather icons have no night version.
+
 | Output     | Weather           |
 | ---------- | ----------------- |
 | hur_warn   | Hurricane warning |
