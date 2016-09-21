@@ -3,7 +3,8 @@ A Python snippet that would pull the current weather condition for a given locat
 
 # Weather Explanation
 The result of this program could be interpreted according to the following table
-(A copy from <http://www.weather.gov/forecast-icons>)
+
+(This is actually a copy of <http://www.weather.gov/forecast-icons>)
 
 | Output | Weather   |
 | ------ | --------- |
@@ -36,8 +37,8 @@ The result of this program could be interpreted according to the following table
 | fg     | Fog       |
 
 Notes:
-Add n prefix: use night version.
-Add wind_ to skc to ovc: Use windy version.
+* Add n prefix: use night version.
+* Add wind_ to skc to ovc: Use windy version.
 
 The following weather icons have no night version.
 
