@@ -21,7 +21,7 @@ def main():
     req = ur.get('http://graphical.weather.gov/xml/SOAP_server/ndfdXMLclient.php',data)
     tree = ET.fromstring(req.text)
     info = tree.find('data').find('parameters').find('conditions-icon').find('icon-link')
-    print(info.text[39:])
+    print(info.text[39:-4])
 
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] in ['-v','--version']:
