@@ -1,5 +1,5 @@
 majorVer = 0
-minorVer = 2
+minorVer = 3
 patchLvl = 0
 
 __version__ = str(majorVer)+'.'+str(minorVer)+'.'+str(patchLvl)
